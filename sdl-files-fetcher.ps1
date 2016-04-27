@@ -1,3 +1,7 @@
+# Based on the script given here
+# https://www.reddit.com/r/haskellgamedev/comments/49nbhj/windows_sdl_install_script/
+# but the user for that post has been deleted, so I can't credit them by name.
+
 # Initialization
 $tar = ".tar"
 $tar_gz = $tar + ".gz"
