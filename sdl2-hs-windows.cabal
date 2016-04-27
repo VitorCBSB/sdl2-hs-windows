@@ -1,0 +1,25 @@
+
+name:               sdl2-hs-windows
+version:            0.0.1
+synopsis:           Gets you setup on windows with SDL2 + stack
+homepage:           https://github.com/Lokathor/sdl2-hs-windows
+license:            MIT
+license-file:       LICENSE.txt
+author:             Lokathor
+maintainer:         zefria@gmail.com
+category:           Utils
+build-type:         Simple
+extra-source-files: README.md
+cabal-version:      >=1.10
+
+executable demo
+    default-language:   Haskell2010
+    main-is:            Main.hs
+    hs-source-dirs:     src
+    build-depends:      base,
+                        sdl2,
+                        sdl2-image,
+                        sdl2-mixer,
+                        sdl2-ttf,
+                        linear
+--

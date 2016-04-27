@@ -1,0 +1,30 @@
+flags: {}
+extra-deps: []
+resolver: lts-5.5
+packages:
+- '.'
+- location:
+    git: https://github.com/haskell-game/sdl2
+    commit: 469bc9d6abf8ced92f7dc7ecb818ebc69798893f
+- location:
+    git: https://github.com/nxths/sdl2-image/
+    commit: 0808be3039ce362402166cfdd02fb74c6cd4a2a3
+- location:
+    git: https://github.com/nxths/sdl2-mixer/
+    commit: 7203e7ce9b30cbbd216d3f5e11f7c57aeff3ae5a
+- location:
+    git: https://github.com/nxths/sdl2-ttf/
+    commit: aca82db428b6602cf5b127f46bfe5c83442d173c
+
+extra-include-dirs:
+- C:\sdl\SDL2-2.0.4\lib\x64
+- C:\sdl\SDL2_image-2.0.1\x86_64-w64-mingw32\include\SDL2
+- C:\sdl\SDL2_mixer-2.0.1\x86_64-w64-mingw32\include\SDL2
+- C:\sdl\SDL2_ttf-2.0.14\x86_64-w64-mingw32\include\SDL2
+- C:\sdl\SDL2-2.0.4\include
+
+extra-lib-dirs:
+- C:\sdl\SDL2-2.0.4\include
+- C:\sdl\SDL2_image-2.0.1\x86_64-w64-mingw32\lib
+- C:\sdl\SDL2_mixer-2.0.1\x86_64-w64-mingw32\lib
+- C:\sdl\SDL2_ttf-2.0.14\x86_64-w64-mingw32\lib
