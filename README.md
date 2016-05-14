@@ -3,8 +3,10 @@
 This project lets you get sdl2 and its helper packages setup with stack on
 windows relatively painlessly.
 
-* First, you'll should get [7zip](http://www.7-zip.org/download.html) if you
-don't yet have it. It's needed for the next step.
+* First, you should get [7zip](http://www.7-zip.org/download.html) if you
+don't yet have it. Make sure its path, which contains its binary 7z.exe
+(default is "C:\Program Files\7-Zip"), is located in your PATH. It's needed
+for the next step.
 
 * Next you run `sdl-files-fetcher.ps1`, which is a PowerShell script. This
 downloads and unpacks all the needed files into `C:\sdl`, and cleans up the

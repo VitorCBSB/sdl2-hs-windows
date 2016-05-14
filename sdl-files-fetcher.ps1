@@ -43,9 +43,9 @@ $pkg_config_url = "http://ftp.gnome.org/pub/gnome/binaries/win32/dependencies/pk
 
 New-Item $install_dir -type directory -force
 
-$env:PKG_CONFIG_PATH = $sdl2_dir       + $target_dir + $pkg_config_subdir + ";" + 
-                       $sdl2_image_dir + $target_dir + $pkg_config_subdir + ";" + 
-                       $sdl2_mixer_dir + $target_dir + $pkg_config_subdir + ";" + 
+$env:PKG_CONFIG_PATH = $sdl2_dir       + $target_dir + $pkg_config_subdir + ";" +
+                       $sdl2_image_dir + $target_dir + $pkg_config_subdir + ";" +
+                       $sdl2_mixer_dir + $target_dir + $pkg_config_subdir + ";" +
                        $sdl2_ttf_dir   + $target_dir + $pkg_config_subdir
 
 $env:PATH = $env:PATH + ";" + $sdl2_dir       + $target_dir + "\bin;" +
@@ -71,26 +71,26 @@ $client.DownloadFile($gettext_url,    $gettext_dir    + $zip)
 $client.DownloadFile($glib_url,       $glib_dir       + $zip)
 $client.DownloadFile($pkg_config_url, $pkg_config_dir + $zip)
 
-.\7za e ($sdl2_dir       + $tar_gz) ("-o" + $install_dir)
-.\7za e ($sdl2_image_dir + $tar_gz) ("-o" + $install_dir)
-.\7za e ($sdl2_mixer_dir + $tar_gz) ("-o" + $install_dir)
-.\7za e ($sdl2_ttf_dir   + $tar_gz) ("-o" + $install_dir)
+7z e ($sdl2_dir       + $tar_gz) ("-o" + $install_dir)
+7z e ($sdl2_image_dir + $tar_gz) ("-o" + $install_dir)
+7z e ($sdl2_mixer_dir + $tar_gz) ("-o" + $install_dir)
+7z e ($sdl2_ttf_dir   + $tar_gz) ("-o" + $install_dir)
 
-.\7za x ($sdl2_dir       + $tar) ("-o" + $install_dir)
-.\7za x ($sdl2_image_dir + $tar) ("-o" + $install_dir)
-.\7za x ($sdl2_mixer_dir + $tar) ("-o" + $install_dir)
-.\7za x ($sdl2_ttf_dir   + $tar) ("-o" + $install_dir)
+7z x ($sdl2_dir       + $tar) ("-o" + $install_dir)
+7z x ($sdl2_image_dir + $tar) ("-o" + $install_dir)
+7z x ($sdl2_mixer_dir + $tar) ("-o" + $install_dir)
+7z x ($sdl2_ttf_dir   + $tar) ("-o" + $install_dir)
 
-.\7za x ($sdl2_binding_dir       + $zip) ("-o" + $install_dir)
-.\7za x ($sdl2_image_binding_dir + $zip) ("-o" + $install_dir)
-.\7za x ($sdl2_mixer_binding_dir + $zip) ("-o" + $install_dir)
-.\7za x ($sdl2_ttf_binding_dir   + $zip) ("-o" + $install_dir)
+7z x ($sdl2_binding_dir       + $zip) ("-o" + $install_dir)
+7z x ($sdl2_image_binding_dir + $zip) ("-o" + $install_dir)
+7z x ($sdl2_mixer_binding_dir + $zip) ("-o" + $install_dir)
+7z x ($sdl2_ttf_binding_dir   + $zip) ("-o" + $install_dir)
 
-.\7za x ($gettext_dir    + $zip) ("-o" + $pkg_config_dir)
-.\7za x ($glib_dir       + $zip) ("-o" + $pkg_config_dir)
-.\7za x ($pkg_config_dir + $zip) ("-o" + $pkg_config_dir)
+7z x ($gettext_dir    + $zip) ("-o" + $pkg_config_dir)
+7z x ($glib_dir       + $zip) ("-o" + $pkg_config_dir)
+7z x ($pkg_config_dir + $zip) ("-o" + $pkg_config_dir)
 
-$client.DownloadFile($sdl_header_url, $sdl2_dir + $target_dir + "\include\SDL2\SDL_platform.h")
+$client.DownloadFile($sdl_header_url, $sdl2_dir + $target_dir + "\include\SDL_platform.h")
 
 # Cleanup
 Remove-Item ($sdl2_dir       + $tar_gz) -recurse
